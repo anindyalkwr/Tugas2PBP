@@ -1,25 +1,59 @@
 {% extends 'base.html' %}
 
  {% block content %}
+  <style>
+  body {
+    background-image: url(https://i.pinimg.com/564x/d3/6c/d7/d36cd770fe9e46e71d8b843cc9abf64f.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  table, th, td {
+    border:1px solid brown;
+    background-color: #FFFDD0;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    color: darkgreen;
+  } 
+
+  h1, h4, p {
+    text-align: center;
+    color: lightpink;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  </style>
 
   <h1>Lab 1 Assignment PBP/PBD</h1>
 
-  <h5>Name: </h5>
-  <p>Fill me!</p>
+  <h4>Name: </h4>
+  <p>Anindya Lokeswara</p>
 
-  <h5>Student ID: </h5>
-  <p>Fill me!</p>
+  <h4>Student ID: </h4>
+  <p>2106633696</p>
 
   <table>
     <tr>
-      <th>Item Name</th>
-      <th>Item Price</th>
-      <th>Item Stock</th>
-      <th>Rating</th>
-      <th>Description</th>
-      <th>Item URL</th>
+      <th>&nbsp; Item Name &nbsp;</th>
+      <th>&nbsp; Item Price &nbsp;</th>
+      <th>&nbsp; Item Stock &nbsp;</th>
+      <th>&nbsp; Rating &nbsp;</th>
+      <th>&nbsp; Description &nbsp;</th>
+      <th>&nbsp; Item URL &nbsp;</th>
     </tr>
     {% comment %} Add the data below this line {% endcomment %}
+    {% for barang in list_barang %}
+        <tr>
+            <th>&nbsp; {{barang.item_name}} &nbsp;</th>
+            <th>&nbsp; {{barang.item_price}} &nbsp;</th>
+            <th>&nbsp; {{barang.item_stock}} &nbsp;</th>
+            <th>&nbsp; {{barang.rating}} &nbsp;</th>
+            <th>&nbsp; {{barang.description}} &nbsp;</th>
+            <th>&nbsp; <a href="{{barang.item_url}}" style="display:block; text-decoration: none; color:lightcoral">&nbsp; {{barang.item_name}} &nbsp;</a> &nbsp;</th>
+        </tr>
+    {% endfor %}
   </table>
 
  {% endblock content %}
