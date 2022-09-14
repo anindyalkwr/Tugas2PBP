@@ -11,4 +11,4 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ![](baganPBP.png)
 
-  '''urls.py'''
+  Pertama - tama, user akan melontarkan request ```urls.py```
