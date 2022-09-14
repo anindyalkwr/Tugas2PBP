@@ -9,6 +9,6 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 ## Penjelasan dan demonstrasi program
 (1) Bagan _request client_ dan responnya pada aplikasi web berbasis Django 
 
-![](baganPBP.png)
+![](baganPBP-rev.png)
 
-  Pertama - tama, user akan melontarkan request ```urls.py```
+  ```urls.py``` akan menerima dan mencocokan HTTP Request yang diberikan oleh user
