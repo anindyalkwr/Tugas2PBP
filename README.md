@@ -11,4 +11,4 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ![](baganPBP-rev.png)
 
-  ```urls.py``` akan menerima dan mencocokan HTTP Request yang diberikan oleh user
+  Program berjalan dengan memproses HTTP Request user pada file ```urls.py``` yang akan men-_extract__ URL dari request, dan mencocokkan url tersebut dengan url yang telah terdefinisi.
