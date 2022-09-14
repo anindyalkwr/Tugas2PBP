@@ -11,4 +11,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ![](baganPBP-rev.png)
 
-  Program berjalan dengan memproses HTTP Request user pada file ```urls.py``` yang akan men-_extract__ URL dari request, dan mencocokkan url tersebut dengan url yang telah terdefinisi.
+  Program berjalan dengan memproses HTTP Request user pada file ```urls.py``` yang akan men-_extract_ URL dari request dan mencocokkan url tersebut dengan url yang telah terdefinisi. Apabila dikenali, maka program akan memanggil fungsi view pada file ```views.py``` yang bersesuaian (menggunakan parameter request) untuk membuat pemodelan dari data berdasarkan file ```models.py```. Terakhir pada file tersebut (models.py) terjadi transaksi data, yaitu pengambilan atau pembuatan data dari database (apabila tersedia) ke dalam fungsi view dan menerapkannya ke .html template yang sesuai.
+ 
+ (2) Mengapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+ 
