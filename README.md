@@ -5,4 +5,4 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 ## Link Aplikasi Heroku
 [Lab 1 Assignment PBP/PBD](http://lokeswara-pbp-tugas2.herokuapp.com/katalog/) <br>
 
-## Bagan _request client_ dan responnya pada aplikasi web berbasis Django
+Bagan _request client_ dan responnya pada aplikasi web berbasis Django
