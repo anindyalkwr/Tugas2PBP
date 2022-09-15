@@ -19,5 +19,8 @@ class MyTestClass(TestCase):
     def test_something_that_will_fail(self):
         self.assertFalse((self.firstItem.item_price == 2500000), 'Item price is correct')
 
-    def test_something_equal(self):
+    def test_something_equalOne(self):
         self.assertEqual(self.firstItem.item_url, "https://www.yonex.com/badminton/astrox-22-rx")
+
+    def test_something_equalTwo(self):
+        self.assertEqual(self.firstItem, CatalogItem.objects.first())
