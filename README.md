@@ -44,7 +44,7 @@ Perubahan yang dilakukan pada template html, hanya dilakukan pada file ```katalo
 e. Deploy ke Heroku
 Setelah melakukan seluruh perubahan pada file - file diatas, maka pada direktori yang sama kembali melakukan perintah ```git add```, ```git commit```, dan ```git push``` untuk melakukan pembaharuan pada repositori github. Setelah itu membuat aplikasi pada website heroku dan juga membuat Secrets Key agar Deploy ke Heroku berjalan dengan Lancar
 
-referensi: <br>
+#### Referensi: <br>
 https://data-flair.training/blogs/django-request-response-cycle/
 https://docs.python.org/3/library/venv.html#:~:text=A%20virtual%20environment%20is%20a,part%20of%20your%20operating%20system.
 https://dev.notnoob.com/tutorial-virtual-environment/
