@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+  <style>
+  body {
+    background-image: url(https://wallpapercave.com/wp/wp11013386.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  table, th, td {
+    border:1px solid brown;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  } 
+
+  h1, h4{
+    text-align: center;
+    color: yellowgreen;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  </style>
+
+  <h1>Tugas 3: Pengimplementasian Data Delivery Menggunakan Django</h1>
+
+  <h4>Name: Anindya Lokeswara </h4>
+
+  <h4>Student ID: 2106633696</h4>
+
+  <table>
+    <tr>
+      <th> Watched </th>
+      <th> Title </th>
+      <th> Rating </th>
+      <th> Release Date </th>
+      <th> Review </th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for barang in list_watchlist %}
+        <tr>
+            <th> {{barang.watched}} </th>
+            <th> {{barang.title}} </th>
+            <th> {{barang.rating}} </th>
+            <th> {{barang.release_date}} </th>
+            <th> {{barang.review}} </th>
+        </tr>
+    {% endfor %}
+  </table>
+
+ {% endblock content %}
