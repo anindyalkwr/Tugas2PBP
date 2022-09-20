@@ -5,7 +5,7 @@
         "fields": {
             "watched": true,
             "title": "Fight Club",
-            "rating": 9.6,
+            "rating": 9,
             "release_date": "1999-11-11",
             "review": "Great great film. Fight Club is not this generic violent film, it's actually a very intelligently written film that you must watch. Oops I talked about Fight Club..."
         }
@@ -16,7 +16,7 @@
         "fields": {
             "watched": false,
             "title": "Taxi Driver",
-            "rating": 9.3,
+            "rating": 9,
             "release_date": "1976-02-08",
             "review": "A brilliant psychoanalysis of a disturbed individual, Taxi Driver is masterfully directed and showcases the career-defining performance of Robert De Niro, and remains just as poignant and hard-hitting as it was back then."
         }
@@ -27,7 +27,7 @@
         "fields": {
             "watched": true,
             "title": "Shutter Island",
-            "rating": 7.7,
+            "rating": 7,
             "release_date": "2010-03-03",
             "review": "If I could rewatch any movie for the first time just for that satisfaction of going through the plot twist again, it would be for this movie. One of my favourites of all time."
         }
@@ -38,7 +38,7 @@
         "fields": {
             "watched": true,
             "title": "Inception",
-            "rating": 9.1,
+            "rating": 9,
             "release_date": "2010-07-16",
             "review": "A truly rare, intelligent summer blockbuster packed with ideas and concepts to keep the audience contemplating long after the credits."
         }
@@ -49,7 +49,7 @@
         "fields": {
             "watched": true,
             "title": "Interstellar",
-            "rating": 8.6,
+            "rating": 8,
             "release_date": "2014-11-06",
             "review": "Christopher Nolan delivers another instant classic with an unforgettably beautiful soundtrack by Hans Zimmer."
         }
@@ -60,7 +60,7 @@
         "fields": {
             "watched": true,
             "title": "The Medium",
-            "rating": 7.3,
+            "rating": 7,
             "release_date": "2021-01-28",
             "review": "It is not for the faint of heart. But horror fans on the hunt for a gruesome treat this Halloween will not be disappointed."
         }
@@ -71,7 +71,7 @@
         "fields": {
             "watched": true,
             "title": "Incantation",
-            "rating": 5.2,
+            "rating": 5,
             "release_date": "2022-03-18",
             "review": "Incantation feels less like an attempt at exploring the possibilities of the found footage format and more like an attempt at getting away with terrible cinematography."
         }
@@ -82,7 +82,7 @@
         "fields": {
             "watched": true,
             "title": "Midsommar",
-            "rating": 6.3,
+            "rating": 6,
             "release_date": "2019-09-07",
             "review": "Ari Aster's approach to horror filmmaking seeps into your subconsciousness with great effect, lingering like an uninvited guest."
         }
@@ -93,7 +93,7 @@
         "fields": {
             "watched": true,
             "title": "Hereditary",
-            "rating": 6.8,
+            "rating": 6,
             "release_date": "2018-06-27",
             "review": "It's an uneasy and visually well-crafted horror exploring our parental fears. It's also a film that, surprise, surprise, has split opinions among audiences and critics."
         }
@@ -104,7 +104,7 @@
         "fields": {
             "watched": true,
             "title": "La la land",
-            "rating": 8.1,
+            "rating": 8,
             "release_date": "2012-12-09",
             "review": "One of the most magical, most heartfelt and most majestic movies I've ever seen in my whole life! This film wins thanks to a fantastic direction, unforgettable music, and mesmerizing performances!"
         }
