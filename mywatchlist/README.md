@@ -4,5 +4,5 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Link Aplikasi Heroku
 [HTML](http://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/html/), 
-[ XML](http://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/xml/), 
-[ JSON](http://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/json/)
+[XML](http://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/xml/), 
+[JSON](http://lokeswara-pbp-tugas2.herokuapp.com/mywatchlist/json/)
