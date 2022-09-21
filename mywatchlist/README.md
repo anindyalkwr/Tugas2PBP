@@ -9,7 +9,19 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 
 ## Penjelasan dan demonstrasi program
 (1) Jelaskan perbedaan antara JSON, XML, dan HTML! <br>
+
+(a) JSON <br>
+JSON (JavaScript Object Notation) merupakan standard _text-based format_ untuk menampilkan data struktur dengan menggunakan syntax dari objek javascript. JSON dianggap lebih cepat,  _lightweight_ dan didesain khusus untuk pertukaran data ringan serta lebih mudah digunakan sehingga menjadi lebih populer dari hari ke hari. <br>
+
+(b) XML <br>
+XML (eXtensible Markup Language) merupakan sebuah markup language mirip seperti HTML yang didesain untuk menyimpan dan memindahkan data serta bersifat _self-descriptive_. XML lebih baik digunakan untuk aplikasi dengan syarat - syarat yang kompleks mengenai pertukaran data, seperti _enterprise_. <br>
+
+(c) HTML<br>
+HTML (Hyper Text Markup Language) merupakan sebuah standard markup language yang digunakan untuk membuat halaman website. HTML ditujukan dalam pembuatan dan pengembangan struktur dari website dalam menyajikan / menampilkan data seperti menambahkan sebuah paragraf, links, dan block - block elemen lainnya. Perlu dicatat bahwa html tidak dianggap sebagai sebuah programming language tetapi dianggap sebagai _official web standard_. <br>
+
 (2) Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform? <br>
+Data delivery digunakan sebagai alat penyimpanan dan pengiriman data untuk disajikan sehingga informasi di dalamnya lebih mudah dicerna dan dilihat. Pada pengimplementasian sebuah platform, sebuah data delivery sangat dibutuhkan baik untuk user yang menggunakan platformnya maupun untuk developernya sendiri. Karena sebuah platform sangatlah berkaitan erat dengan data dari segala aspeknya untuk dapat berjalan dengan lancar.
+
 (3) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
 Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 3, antara lain: <br>
@@ -41,3 +53,7 @@ Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 3, antara lain
 ![](postmanJSON.jpg) <br>
 
 #### Referensi:
+https://www.hostinger.com/tutorials/what-is-html
+https://www.w3schools.com/xml/xml_whatis.asps
+https://www.w3schools.com/whatis/whatis_json.asp
+https://www.toptal.com/web/json-vs-xml-part-1#:~:text=JSON%20is%20a%20data%20interchange,of%20any%20XML%20sub%2Dlanguage.
