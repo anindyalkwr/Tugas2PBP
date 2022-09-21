@@ -20,6 +20,7 @@ XML (eXtensible Markup Language) merupakan sebuah markup language mirip seperti 
 HTML (Hyper Text Markup Language) merupakan sebuah standard markup language yang digunakan untuk membuat halaman website. HTML ditujukan dalam pembuatan dan pengembangan struktur dari website dalam menyajikan / menampilkan data seperti menambahkan sebuah paragraf, links, dan block - block elemen lainnya. Perlu dicatat bahwa html tidak dianggap sebagai sebuah programming language tetapi dianggap sebagai _official web standard_. <br>
 
 (2) Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform? <br>
+
 Data delivery digunakan sebagai alat penyimpanan dan pengiriman data untuk disajikan sehingga informasi di dalamnya lebih mudah dicerna dan dilihat. Pada pengimplementasian sebuah platform, sebuah data delivery sangat dibutuhkan baik untuk user yang menggunakan platformnya maupun untuk developernya sendiri. Karena sebuah platform sangatlah berkaitan erat dengan data dari segala aspeknya untuk dapat berjalan dengan lancar.
 
 (3) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
