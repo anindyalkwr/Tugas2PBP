@@ -12,10 +12,12 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 (2) Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform? <br>
 (3) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
+#### URL "/mywatchlist/html" berhasil mengembalikan respon HTTP 200 OK
+![](postmanHTML.jpg) <br>
 
-![](postmanHTML.jpg)
-### URL "/mywatchlist/html" berhasil mengembalikan respon HTTP 200 OK
-![]((postmanXML.jpg)
-### URL "/mywatchlist/xml" berhasil mengembalikan respon HTTP 200 OK
-![]((postmanJSON.jpg)
-### URL "/mywatchlist/json" berhasil mengembalikan respon HTTP 200 OK
+#### URL "/mywatchlist/xml" berhasil mengembalikan respon HTTP 200 OK
+![]((postmanXML.jpg) <br>
+
+#### URL "/mywatchlist/json" berhasil mengembalikan respon HTTP 200 OK
+![]((postmanJSON.jpg) <br>
+
