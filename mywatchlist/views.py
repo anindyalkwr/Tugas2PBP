@@ -4,11 +4,24 @@ from django.http import HttpResponse
 from django.core import serializers
 
 # TODO: Create your views here.
+
+def show_notice(request):
+    data_watchlist = WatchListItem.objects.all()
+    filmWatched = 0
+    for data in data_watchlist:
+        if data.watched == True:
+            filmWatched += 1
+    if filmWatched >= (len(data_watchlist) - filmWatched):
+        return "Selamat, kamu sudah banyak menonton!"
+    return "Wah, kamu masih sedikit menonton!"
+    
+
 def show_watchlist(request):
     data_watchlist = WatchListItem.objects.all()
     context = {
     'list_watchlist': data_watchlist,
-    'nama': 'Anindya Lokeswara'
+    'nama': 'Anindya Lokeswara',
+    'notice': show_notice(request)
     }
     return render(request, "mywatchlist.html", context)
 
