@@ -12,8 +12,8 @@ def show_notice(request):
         if data.watched == True:
             filmWatched += 1
     if filmWatched >= (len(data_watchlist) - filmWatched):
-        return "Selamat, kamu sudah banyak menonton!"
-    return "Wah, kamu masih sedikit menonton!"
+        return "Selamat, kamu sudah banyak menonton! 🍿🥇"
+    return "Wah, kamu masih sedikit menonton! 😴🥉"
     
 
 def show_watchlist(request):
