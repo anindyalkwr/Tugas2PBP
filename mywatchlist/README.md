@@ -16,8 +16,8 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 ![](postmanHTML.jpg) <br>
 
 #### URL "/mywatchlist/xml" berhasil mengembalikan respon HTTP 200 OK
-![]((postmanXML.jpg) <br>
+![](postmanXML.jpg) <br>
 
 #### URL "/mywatchlist/json" berhasil mengembalikan respon HTTP 200 OK
-![]((postmanJSON.jpg) <br>
+![](postmanJSON.jpg) <br>
 
