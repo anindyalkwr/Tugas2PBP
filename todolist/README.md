@@ -18,6 +18,8 @@ Apabila CSRF token tidak digunakan di dalam potongan kode yang dibutuhkan, sehar
 Kita tetap dapat membuat elemen form secara manual tanpa melalui generator tersebut, yaitu dengan menambahkan block <form> dari file html yang diinginkan dan dihubungkan dengan sebuah Action Trigger (atau url yang bersesuaian dengan fungsi views.py) yang akan memulai actionnya menggunakan method POST. Kemudian di dalam block form tersebut dapat diisi dengan block table yang akan meminta input dari user sesuai yang dibutuhkan formnya dan divalidasi sesuai pada file views.py. Apabila memenuhi maka, data dari form akan tersimpan dan dapat ditampilkan
 
 (3) Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML. <br>
+
+Setelah memberi input yang dibutuhkan oleh Form, data akan mempunyai value berupa Post yang divalidasi pada fungsi di dalam views.py (Data dapat diambil menggunakan fungsi request.POST.get()). Setelah divalidasi maka akan membuat objek TaskItem baru dengan input yang telah diberikan oleh user. Sekarang data sudah tersedia (data difilter sesuai usernya) dan akan menjadi input yang akan dimasukkan ke dalam url html yang akan disajikan kembali kepada user.
   
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
