@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+<style>
+    body {
+      background-image: url(https://wallpaperaccess.com/full/6302899.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    } 
+    h1 {
+        margin-top: 190px;
+        color: purple;
+    }
+    * {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        vertical-align: middle;
+    }
+    table, th, td {
+        border: 5px inset plum;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        border-collapse: collapse;
+        background-color:rgba(56, 67, 208, 0.2);
+        width: 250px;
+        padding: 10px 14px
+    }
+    table {
+        border-width: 1px;
+        border-radius: 10px;
+    }
+    ul, li {
+        list-style: none;
+    }
+
+</style>
+
+<div class = "login">
+
+    <h1>Login</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+            </tr>
+                    
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input class="btn login_btn" type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}     
+        
+    Belum mempunyai akun? <a href="{% url 'todolist:register' %}" >Buat Akun</a>
+
+</div>
+
+{% endblock content %}

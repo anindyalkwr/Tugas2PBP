@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+  <style>
+  body {
+    background-image: url(https://wallpaperaccess.com/full/6302899.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  table, th, td {
+    border:1px solid rgba(110, 207, 189);
+    text-align: center;
+    background-color:rgba(56, 67, 208, 0.35);
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+  } 
+
+  h1, h3, h5 {
+    text-align: center;
+    color: purple;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  h4 {
+    text-align: left;
+    margin-left: 150px;
+    color: purple;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  * {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        vertical-align: middle;
+  }
+
+  </style>
+
+  <h1>Tugas 4: Pengimplementasian Form dan Autentikasi Menggunakan Django</h1>
+
+  <h4>User logged in: {{user}} </h4>
+
+  <table>
+    <tr>
+      <th> Date </th>
+      <th> Title </th>
+      <th> Description </th>
+      <th> Completion Progress </th>
+      <th> Toggle Button </th>
+      <th> Delete Task </th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for data in list_todolist %}
+        <tr>
+            <th> {{data.date}} </th>
+            <th> {{data.title}} </th>
+            <th> {{data.description}} </th>
+            {% if data.is_finished == False %}
+              <th> Not Completed </th>
+            {% else %}
+              <th> Completed </th>
+            {% endif %}
+            <th> <button><a href="{% url 'todolist:toggle' data.id %}" title="">Change Progression</a></button> </th>
+            <th> <button><a href="{% url 'todolist:delete' data.id %}" title="">Delete</a></button> </th>
+        </tr>
+    {% endfor %}
+  </table>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+<button><a href="{% url 'todolist:add_task' %}">Add a new task</a></button>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+ {% endblock content %}
