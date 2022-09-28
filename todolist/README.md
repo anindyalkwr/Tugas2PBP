@@ -35,7 +35,7 @@ Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 4, antara lain
 
 (g) Untuk melakukan deploy,  saya melakukan git add, commit, dan push ke repositori tugas pbp yang sama seperti sebelumnya. <br>
 
-(h) Setelah deploy berhasil, saya a melakukan pengecekan pada link app heroku yang telah di deploy apakah berjalan dengan lancar <br>
+(h) Setelah deploy berhasil, saya melakukan pengecekan pada link app heroku yang telah di deploy apakah berjalan dengan lancar <br>
 
 (i) Terakhir, saya menambahkan dari referensi yang saya baca dan membuat file README.md pada repositori github ini. <br>
 
