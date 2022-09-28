@@ -15,6 +15,8 @@ Apabila CSRF token tidak digunakan di dalam potongan kode yang dibutuhkan, sehar
 
 (2) Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual. <br>
 
+Kita tetap dapat membuat elemen <form> secara manual tanpa melalui generator tersebut, yaitu dengan menambahkan block <form> dari file html yang diinginkan dan dihubungkan dengan sebuah Action Trigger (atau url yang bersesuaian dengan fungsi views.py) yang akan memulai actionnya menggunakan method POST. Kemudian di dalam block form tersebut dapat diisi dengan block table yang akan meminta input dari user sesuai yang dibutuhkan oleh Formnya. Terakhir, form akan divalidasi pada fungsi views.py kepada request user yang sesuai.
+
 (3) Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML. <br>
   
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
