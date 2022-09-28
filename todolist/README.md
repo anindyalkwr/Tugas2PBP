@@ -7,7 +7,7 @@ Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu 
 [App To Do List](https://lokeswara-pbp-tugas2.herokuapp.com/todolist/)
 
 ## Penjelasan dan demonstrasi program
-(1) Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>? <br>
+(1) Apa kegunaan {% csrf_token %} pada elemen form? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen form? <br>
 
 Cross-Site Request Forgery (CSRF) token adalah sebuah _secure random token (e.g., synchronizer token or challenge token)_ yang digunakan untuk menentukan apabila HTTP request yang diterima benar dihasilkan melalui _user interface_ dari aplikasi tersebut. Singkatnya, CRSF token bekerja dengan cara melakukan verifikasi terhadap _end-user request_ dnmana request yang di-_generate_ dari browser tersebut harus mengandung CRSF token yang bersangkutan dan server aplikasi akan menolak _request_ apabila CRSF token gagal memenuhi verifikasi tersebut. <br>
 
@@ -19,7 +19,7 @@ Kita tetap dapat membuat elemen form secara manual tanpa melalui generator terse
 
 (3) Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML. <br>
 
-Setelah memberi input yang dibutuhkan oleh Form, data akan mempunyai value berupa Post yang divalidasi pada fungsi di dalam views.py (Data dapat diambil menggunakan fungsi request.POST.get()) . Setelah data berhasil divalidasi maka akan membuat objek TaskItem baru dengan attribut yang telah diberikan oleh user dan sekarang data sudah tersedia (data difilter sesuai usernya) serta akan menjadi response yang akan dimasukkan ke dalam url html yang akan disajikan kembali kepada user.
+Setelah memberi input yang dibutuhkan oleh Form, data akan mempunyai value berupa Post yang divalidasi pada fungsi di dalam views.py (Data dapat diambil menggunakan fungsi request.POST.get()) . Setelah data berhasil divalidasi maka akan membuat objek TaskItem baru dengan attribut yang telah diberikan oleh user dan sekarang data sudah tersedia dalam database (data difilter sesuai usernya) serta akan menjadi response yang akan dimasukkan ke dalam url html yang akan disajikan kembali kepada user.
   
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
