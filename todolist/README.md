@@ -19,7 +19,7 @@ Kita tetap dapat membuat elemen form secara manual tanpa melalui generator terse
 
 (3) Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML. <br>
 
-Setelah memberi input yang dibutuhkan oleh Form, data akan mempunyai value berupa Post yang divalidasi pada fungsi di dalam views.py (Data dapat diambil menggunakan fungsi request.POST.get()). Setelah divalidasi maka akan membuat objek TaskItem baru dengan input yang telah diberikan oleh user. Sekarang data sudah tersedia (data difilter sesuai usernya) dan akan menjadi input yang akan dimasukkan ke dalam url html yang akan disajikan kembali kepada user.
+Setelah memberi input yang dibutuhkan oleh Form, data akan mempunyai value berupa Post yang divalidasi pada fungsi di dalam views.py (Data dapat diambil menggunakan fungsi request.POST.get()) . Setelah data berhasil divalidasi maka akan membuat objek TaskItem baru dengan attribut yang telah diberikan oleh user dan sekarang data sudah tersedia (data difilter sesuai usernya) serta akan menjadi response yang akan dimasukkan ke dalam url html yang akan disajikan kembali kepada user.
   
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 
