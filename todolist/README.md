@@ -53,3 +53,67 @@ Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 4, antara lain
 
 #### Referensi:
  https://www.synopsys.com/glossary/what-is-csrf.html#:~:text=A%20CSRF%20token%20is%20a,token%20for%20every%20user%20session.
+ 
+ # (README) Tugas 5: Web Design Using HTML, CSS, and CSS Framework
+
+Pemrograman Berbasis Platform (CSGE602022) - diselenggarakan oleh Fakultas Ilmu Komputer Universitas Indonesia, Semester Ganjil 2022/2023
+
+## Link Aplikasi Heroku
+[App To Do List](https://lokeswara-pbp-tugas2.herokuapp.com/todolist/)
+
+## Penjelasan dan demonstrasi program
+(1) Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style? <br>
+a. Inline CSS <br>
+Inline CSS digunakan untuk memberi gaya (_style_) elemen HTML yang spesifik dengan menambahkan atribut _style_ di dalam tag HTML-nya. Hal ini menyebabkan Inline CSS dapat memiliki kelebihan dan kekurangan sebagai berikut: <br>
+Kelebihan: <br>
+Dapat digunakan untuk melakukan pengecekan apakah style yang akan diterapkan benar atau melakukan pembenaran skala kecil <br>
+Tidak perlu membuat atau men-_upload_ dokumen terpisah atau ketika tidak mendapatkan akses kepada CSS Files <br>
+Sangat efektif untuk menerapkan style pada elemen tunggal <br>
+Kekurangan: <br>
+Apabila digunakan untuk seluruh tag HTML atau sebagian besar, akan sangat tidak efektif baik dalam waktu pembuatannya maupun ruang dan waktu yang program butuhkan serta tidak terstruktur dengan rapih <br>
+b. Internal CSS <br>
+Internal CSS digunakan untuk memberi gaya kepada elemen HTML tunggal maupun lebih dalam file html yang sama atau file CSS pada direktori yang sama. Hal ini dilakukan dengan menambahkan tag style di dalam head section file HTML. Adapun kelebihan dan kekurangan dari Internal CSS, antara lain: <br>
+Kelebihan: <br>
+Efektif untuk menerapkan style pada halaman tunggal HTML <br>
+Dapat menggunakan class dan Id Selectors di dalam style sheetnya <br>
+Kekurangan: <br>
+Apabila digunakan untuk banyak halaman HTML, tidak efektif baik dalam waktu pembuatannya maupun ruang dan waktu yang program butuhkan (Ukuran halaman dan lama aplikasi load) <br>
+c. External CSS <br>
+External CSS digunakan untuk memberi gaya kepada elemen HTML tunggal maupun lebih pada file CSS yang telah dihubungkan dengan webpagesnya. Adapun kelebihan dan kekurangan dari External CSS, antara lain: <br>
+Kelebihan: <br>
+Efektif digunakan untuk aplikasi yang memiliki lebih dari 1 html page dan terhubung <br>
+HTML page menjadi lebih mudah dibaca dan lebih rapih <br>
+File CSS dapat digunakan untuk memberi gaya pada beberapa macam page HTML <br>
+Kekurangan: <br>
+Tidak efektif digunakan dalam skala kecil <br>
+Apabila external CSS File belum selesai di load, maka ada kemungkinan page tidak di render secara sempurna<br>
+Apabila menggunakan banyak atau menghubungkan banyak external CSS files akan menambah waktu unduh site <br>
+
+(2) Jelaskan tag HTML5 yang kamu ketahui. <br>
+HTML menyediakan banyak tag untuk digunakan, tetapi beberapa tag yang paling umum dan sudah sering saya jumpai beserta kegunaannya, antara lain :
+
+<!DOCTYPE>	Tag untuk menentukan tipe dokumen
+<html>	Tag untuk membuat sebuah dokumen HTML
+<title>	Tag untuk membuat judul dari sebuah halaman
+<body>	Tag untuk membuat tubuh dari sebuah halaman
+<h1> to <h6>	Tag untuk membuat heading
+<p>	Tag untuk membuat paragraf
+<br>	Memasukan satu baris putus
+<hr>	Tag untuk membuat perubahan dasar kata didalam isi
+<!--...-->	Tag untuk membuat komentar
+<table>	Tag untuk membuat tabel
+<caption>	Tag untuk membuat sebuah caption tabel
+<th>	Tag untuk membuat sebuah sel header tabel
+<tr>	Tag untuk membuat baris dalam sebuah tabel
+<td>	Tag untuk membuat sel dalam sebuah tabel
+style>	Tag untuk membuat informasi style untuk dokumen
+<div>	Tag untuk membuat sebuah bagian dalam dokumen
+<span>	Tag untuk membuat sebuah bagian dalam dokumen
+
+(3)  Jelaskan tipe-tipe CSS selector yang kamu ketahui. <br>
+
+(4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
+
+#### Referensi: <br>
+https://www.hostinger.com/tutorials/difference-between-inline-external-and-internal-css <br>
+https://gilacoding.com/read/tag-tag-pada-html-beserta-fungsinya
