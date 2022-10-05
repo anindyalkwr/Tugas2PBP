@@ -15,7 +15,6 @@ def show_notice(request):
         return "Selamat, kamu sudah banyak menonton! 🍿🥇"
     return "Wah, kamu masih sedikit menonton! 😴🥉"
     
-
 def show_watchlist(request):
     data_watchlist = WatchListItem.objects.all()
     context = {
