@@ -117,11 +117,31 @@ HTML menyediakan banyak tag untuk digunakan, tetapi beberapa tag yang paling umu
 <td>	Tag untuk membuat sel dalam sebuah tabel
 style>	Tag untuk membuat informasi style untuk dokumen
 <div>	Tag untuk membuat sebuah bagian dalam dokumen
-<span>	Tag untuk membuat sebuah bagian dalam dokumen```
+<span>	Tag untuk membuat sebuah bagian dalam dokumen
+```
+<br>
 
 (3)  Jelaskan tipe-tipe CSS selector yang kamu ketahui. <br>
+CSS selector yang saya ketahui dan beberapa sudah pernah saya gunakan, antara lain :
+
+```Selektor Tag - tagName {}
+Selektor Class - .className {}
+Selektor ID - #id {}
+Selektor Atribut - elemen[filter] {}
+Selektor Universal - * {}
+Selektor Pseudo - :hover {} atau :active {} dan masih banyak lagi
+```
+<br> 
 
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
+Saya menerapkan inline CSS dan juga internal CSS. <br>
+a. Karena pada tugas 4 saya telah menerapkan internal CSS untuk memberi gaya pada file html, pada tugas 5 saya hanya menambahkan kode untuk membuat page saya menjadi lebih responsive. <br>
+b. Selain itu, pada html file login, register. add_task saya sudah menggunakan konsep yang sama yaitu dengan adanya tabel dengan isi informasi dan juga button untuk melakukan operasi. Saya menambahkan :pseudo-class seperti hover agar page menjadi responsive; <br>
+c. Pada file todolist sendiri, saya menghapus tabel yang ada dan membuat komponen cards berdasarkan website https://mdbootstrap.com/docs/standard/components/cards/. <br>
+d. Setelah itu saya mulai menambahkan komponen yang diperlukan di dalam cards, dan menambahkan style agar cards dan page tersebut menjadi responsive. Salah satunya adalah kode bonus yaitu agar cards dapat di hover. <br>
+e. Penyesuaian style saya lakukan dengan melihat perubahan pada localhost. <br>
+f. Kemudian saya melakukan deploy dengan melakukan git add, git commit, dan git push. <br>
+g. Setelah memastikan app heroku berjalan lancar, saya membaca beberapa referensi yang dibutuhkan untuk menjawab pertanyaan readme.md <br>
 
 #### Referensi: <br>
 https://www.hostinger.com/tutorials/difference-between-inline-external-and-internal-css <br>
