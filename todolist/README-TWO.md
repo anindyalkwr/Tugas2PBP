@@ -14,16 +14,11 @@ Sehingga pada asychronous programming memperbolehkan untuk menghadapi request ba
 Paradigma Event Driven Programming bermaksud bahwa alur dari suatu program ditentukan oleh suatu "Event" yang dapat berupa user actions dan lain lain. Salah satu contoh yang diterapkan pada tugas ini adalah ketika menggunakan tombol "Add a new task" / "Delete" / "Change Progression", yaitu menunggu user action (menekan tombol) sebelum melakukan fungsi yang bersesuaian. <br>
 
 (3) Jelaskan penerapan asynchronous programming pada AJAX. <br>
-Asynchronus programming diterapkan pada AJAX, pada operasi - operasi penambahan, penghapusan, dan perubahan status card objek TaskItem. Dimana untuk melakukan operasi tersebut tidak terjadi proses men-refresh halaman melainkan dapat tetap melanjutkan operasi lainnya. <br>
+Asynchronus programming diterapkan pada AJAX, pada operasi - operasi penambahan, penghapusan, dan perubahan status card objek TaskItem. Dimana untuk melakukan operasi tersebut tidak terjadi proses men-refresh halaman keselurhan sehingga dapat tetap melanjutkan operasi lainnya. <br>
 
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
-Setelah menambahkan fungsi show_json dan urlnya pada folder todolist, saya menambahkan script ajax dan operasi get dan post untuk melakukan operasinya. Dimana terdapat fungsi Get yaitu createTask(), deleteTask(), toggleTaskStatus(), dan getTaskList() yang akan mengambil data dari json berdasarkan url yang telah di map. Serta fungsi putTaskList yang akan mengiterasi data for each berisikan kartu berisi TaskItem dengan AJAK POST.
-Saya juga merubah form menjadi di dalam tag yang sebelumnya merupakan template (UserCreationForm() untuk form createTask()) untuk memudahkan memasukannya ke dalam modal untuk ditampilkan
-
 Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 6, antara lain: <br>
-
-
-
+Setelah menambahkan fungsi show_json dan urlnya pada folder todolist, saya menambahkan script ajax dan operasi get dan post untuk melakukan operasinya. Dimana terdapat fungsi Get yaitu createTask(), deleteTask(), toggleTaskStatus(), dan getTaskList() yang akan mengambil data dari json berdasarkan url yang telah di map. Serta fungsi Post putTaskList yang akan mengiterasi data for each berisikan kartu berisi TaskItem. Saya juga merubah form menjadi di dalam tag form yang sebelumnya merupakan template (UserCreationForm() untuk form createTask()) untuk memudahkan memasukannya ke dalam modal untuk ditampilkan <br>
 
 #### Referensi: <br>
 https://www.outsystems.com/blog/posts/asynchronous-vs-synchronous-programming/
