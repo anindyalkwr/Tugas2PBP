@@ -1,6 +1,7 @@
 from dataclasses import dataclass
+from django.core import serializers
 from todolist.models import TaskItem
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
@@ -20,6 +21,11 @@ def show_todolist(request):
     'last_login': request.COOKIES['last_login'],
     }
     return render(request, "todolist.html", context)
+
+@login_required(login_url='/todolist/login/')
+def show_todolist_json(request):
+    data_todolist = TaskItem.objects.filter(user = request.user)
+    return HttpResponse(serializers.serialize("json", data_todolist), content_type="application/json")
 
 def register(request):
     form = UserCreationForm()

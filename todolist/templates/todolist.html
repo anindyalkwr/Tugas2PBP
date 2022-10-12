@@ -1,8 +1,83 @@
 {% extends 'base.html' %}
 
  {% block content %}
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(() => {
+        getTaskList();
+    })
+
+    function createTask() {
+        const form = $(".create_task");
+        $.ajax({
+            type: "POST",
+            url: "/todolist/create_task/",
+            data: form.serialize(),
+        }).done(function (data) {
+            form.trigger("reset");
+            getTaskList();
+        });
+        $("#staticBackdrop").modal("hide");
+    }
+
+    function deleteTask(id) {
+        $.ajax({
+            type: "GET",
+            url: "/todolist/delete-task/" + id,
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}'}
+        }).done((data) => {
+            getTaskList();
+        })
+    }
+
+    function toggleTaskStatus(id) {
+        $.ajax({
+            type: "GET",
+            url: "/todolist/toggle-task/" + id,
+            data: {csrfmiddlewaretoken: '{{ csrf_token }}', pk: id}
+        }).done((data) => {
+            getTaskList();
+        })
+    }
+
+    function getTaskList() {
+        $.ajax({
+            type: "GET",
+            url: "/todolist/json/"
+        }).done((data) => {
+            putTaskList(data);
+        });
+    }
+
+    function putTaskList(data) {
+        console.log("LOOK HERE" + data)
+        const cardContainer = $('.cardContainer');
+        cardContainer.empty();
+        data.forEach(task => {
+            const taskCard = `
+            <div class="card" style="width: 350px;">
+              <div class="card-body">
+                <h5 class="card-title">${task.fields.title}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">${task.fields.date}</h6>
+                <p class="card-text">${task.fields.description}</p>
+                ${task.fields.is_finished ? "Selesai" : "Belum Selesai"} <br>
+                
+                <td class="change-status-btn" style="padding:10px;">
+                    <input type="submit" value="Change Status" class="btn btn-primary toggleButton" onclick="toggleTaskStatus(${task.pk})" />
+                </td>
+                <td class="delete-task-btn" style="padding:10px;">
+                    <input type="submit" value="Delete Task"  class="btn btn-danger toggleButton" onclick="deleteTask(${ task.pk })" />
+                </td>
+              </div>
+            </div>
+            `
+            cardContainer.append(taskCard);
+        })
+    };
+</script>
+
   <style>
   body {
     background-image: url(https://wallpaperaccess.com/full/6302899.jpg);
@@ -67,6 +142,54 @@
         cursor: pointer;
   }
 
+  .addTaskButton {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .addTaskButton:hover {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.75);
+  }
+
+  .addTaskButton:activate {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .toggleButton {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+  .toggleButton:hover {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.75);
+  }
+
+  .toggleButton:activate {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid bisque;
+    background-color: bisque;
+    color: blue;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
   .button:hover {
     border: 1px solid bisque;
     color: blue;
@@ -85,30 +208,53 @@
 
   <h5 class="text-muted">User logged in: {{user}} </h5>
 
-  
-    {% comment %} Add the data below this line {% endcomment %}
-    {% for data in list_todolist %}
     
-    <div class="card" style="width: 350px;">
-      <div class="card-body">
-        <h5 class="card-title">{{data.title}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{data.date}}</h6>
-        <p class="card-text">{{data.description}}</p>
-        {% if data.is_finished == False %}
-              <th> Progression: Not Completed </th>
-            {% else %}
-              <th> Progression: Completed </th>
-        {% endif %} <br>
+  <div class="cardContainer">
+    
+  </div>
 
-        <a href="#" class="card-link"><a href="{% url 'todolist:toggle' data.id %}" class = "button" title="" style="text-decoration: none;">Change Progression</a></button> </a>
-        <a href="#" class="card-link"> <a href="{% url 'todolist:delete' data.id %}" class = "button" title="" style="text-decoration: none;">Delete</a></button> </a>
-      </div>
-    </div>
-
-    {% endfor %}
 
 <h6 class="text-muted">Sesi terakhir login: {{ last_login }}</h6>
-<a href="{% url 'todolist:add_task' %}" style="text-decoration: none;" class = "button">Add a new task</a>
+<button type="button" class="btn btn-primary addTaskButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add a new task</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Task Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form class="create_task" method="POST">
+              {% csrf_token %}
+              <div class="form-floating responsive" style="padding-left:0.5%;margin-top: 2%;">
+                <input 
+                type="text" 
+                class="form-control" 
+                id="floatingInput" 
+                name="title" 
+                placeholder="Title">
+                <label for="floatingInput">Title</label>
+              </div>
+            
+              <div class="form-floating responsive" style="padding-left:0.5%;margin-top: 2%;">
+                <textarea 
+                class="form-control" 
+                id="floatingDescription" 
+                name="description" rows="4" cols="50" placeholder="Description"></textarea>
+                <label for="floatingDescription" style="padding-left:2.5%;">Description</label>
+              </div>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="createTask()">Create Task</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
 <a href="{% url 'todolist:logout' %}" style="text-decoration: none;" class = "button">Logout</a>
 
  {% endblock content %}
