@@ -18,7 +18,8 @@ Asynchronus programming diterapkan pada AJAX, pada operasi - operasi penambahan,
 
 (4) Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas. <br>
 Langkah - langkah yang dilakukan dalam pengerjaan checklist tugas 6, antara lain: <br>
-Setelah menambahkan fungsi show_json dan urlnya pada folder todolist, saya menambahkan script ajax dan operasi get dan post untuk melakukan operasinya. Dimana terdapat fungsi Get yaitu createTask(), deleteTask(), toggleTaskStatus(), dan getTaskList() yang akan mengambil data dari json berdasarkan url yang telah di map. Serta fungsi Post putTaskList yang akan mengiterasi data for each berisikan kartu berisi TaskItem. Saya juga merubah form menjadi di dalam tag form yang sebelumnya merupakan template (UserCreationForm() untuk form createTask()) untuk memudahkan memasukannya ke dalam modal untuk ditampilkan <br>
+Setelah menambahkan fungsi show_json dan urlnya pada folder todolist, saya menambahkan script ajax dan operasi get dan post untuk melakukan operasinya. Dimana terdapat fungsi Get yaitu deleteTask(), toggleTaskStatus(), dan getTaskList() yang akan mengambil data dari json berdasarkan url yang telah di map. Serta fungsi Post createTask() dan putTaskList() yang akan mengiterasi data for each berisikan kartu berisi TaskItem dan dimasukkan ke dalam tag. Saya juga merubah form menjadi di dalam tag form yang sebelumnya merupakan template (UserCreationForm() untuk form createTask()) untuk memudahkan memasukannya ke dalam modal untuk ditampilkan <br>
+Selain itu semua, syntax dasar javascript juga menjadi salah satu hal yang sangat penting untuk dapat menjalankan dan mengimplementasikan program ini. Saya banyak belajar javascript dari website serta teman
 
 #### Referensi: <br>
 https://www.outsystems.com/blog/posts/asynchronous-vs-synchronous-programming/
